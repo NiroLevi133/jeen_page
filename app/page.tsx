@@ -9,7 +9,7 @@ const WINNER_NAME = "ניר לוי";
 type Phase = "landing" | "input" | "analyzing" | "winner" | "loser";
 
 const LANDING_MESSAGES = [
-  "Jean AI Agent מחובר בהצלחה ✓",
+  "Jeen AI Agent מחובר בהצלחה ✓",
   "סורק מערכות החברה...",
   "מנתח פעילות עובדים...",
   "קורא מסמכים ופגישות פנימיות...",
@@ -85,7 +85,7 @@ function JeanLogo({ size = 1 }: { size?: number }) {
           className="font-bold tracking-widest text-white"
           style={{ fontSize: 22 * size, lineHeight: 1 }}
         >
-          jean
+          jeen
         </span>
         <span
           className="font-mono text-white/30 tracking-widest uppercase"
@@ -295,14 +295,23 @@ export default function Home() {
               <JeanLogo size={1.3} />
             </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.4 }}
-              className="mt-3 text-white/30 font-mono text-xs tracking-widest uppercase"
+              className="mt-3 flex flex-col items-center gap-2"
             >
-              Internal Employee Analysis System
-            </motion.p>
+              <div className="flex items-center gap-3 font-mono text-sm tracking-widest">
+                <span className="text-white/50">jeen</span>
+                <span className="text-white/20">·</span>
+                <span className="text-white/50">tokens</span>
+                <span className="text-white/20">·</span>
+                <span className="text-white/50">ומועבט</span>
+              </div>
+              <p className="text-white/25 font-mono text-xs tracking-wide">
+                הכנס את שמך כדי להתחיל
+              </p>
+            </motion.div>
 
             <div className="mt-14 w-full max-w-sm space-y-4">
               {LANDING_MESSAGES.map((msg, i) => (
@@ -386,10 +395,25 @@ export default function Home() {
             </motion.div>
 
             <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2 }}
+              className="mt-3 flex flex-col items-center gap-2"
+            >
+              <div className="flex items-center gap-3 font-mono text-sm tracking-widest">
+                <span className="text-white/50">jeen</span>
+                <span className="text-white/20">·</span>
+                <span className="text-white/50">tokens</span>
+                <span className="text-white/20">·</span>
+                <span className="text-white/50">ומועבט</span>
+              </div>
+            </motion.div>
+
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 }}
-              className="mt-10 w-full max-w-sm"
+              className="mt-6 w-full max-w-sm"
             >
               <div className="glass-brand rounded-2xl p-8 glow-purple">
                 <div className="flex items-center justify-between mb-6">
@@ -402,8 +426,8 @@ export default function Home() {
                 <h2 className="text-2xl font-bold text-center mb-2">
                   מי אתה?
                 </h2>
-                <p className="text-white/40 text-sm text-center mb-7">
-                  האייג׳נט יסרוק את כל מערכות החברה ויבדוק מי העובד הטוב ביותר
+                <p className="text-white/40 text-sm text-center mb-7 leading-relaxed">
+                  הכנס את שמך, והאייג׳נט של Jeen AI יסרוק את מערכות החברה, ינתח מסמכים, ביצועים ופעילות - ויגלה האם אתה העובד הכי טוב בחברה.
                 </p>
 
                 <div className="relative">
@@ -451,7 +475,7 @@ export default function Home() {
               transition={{ delay: 0.6 }}
               className="mt-6 text-white/15 font-mono text-xs text-center"
             >
-              מחובר ל-127 מקורות פנימיים · Jean AI v4.7
+              מחובר ל-127 מקורות פנימיים · Jeen AI v4.7
             </motion.p>
           </motion.div>
         )}
